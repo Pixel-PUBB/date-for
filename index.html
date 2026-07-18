@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Эгшиглэн ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="hearts"></div>
+
+<div class="music">
+<button onclick="musicToggle()">🎵</button>
+</div>
+
+<audio id="song" loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+
+<div class="box" id="app">
+
+<h1>💌 Эгшиглэн, надтай хамт болзоонд явахад бэлэн үү? ❤️</h1>
+
+<div class="buttons">
+<button onclick="next('date')">Тийм ээ ❤️</button>
+<button id="no" onmouseover="moveNo()">Үгүй 😂</button>
+<!-- DATE SONGOLTIIN HESeg -->
+<div class="box hidden" id="date">
+
+<h2>📅 Өдрөө сонгоорой</h2>
+
+<button onclick="choose('day','7.21')">7.21</button>
+<button onclick="choose('day','7.22')">7.22</button>
+
+</div>
+
+
+<!-- YU HIH SONGOLT -->
+<div class="box hidden" id="activity">
+
+<h2>✨ Эхлээд юу хийх вэ?</h2>
+
+<button onclick="choose('first','🍜 Хоолонд орох')">
+🍜 Хоолонд орох
+</button>
+
+<button onclick="choose('first','🍦 Зайрмаг идэх')">
+🍦 Зайрмаг идэх
+</button>
+
+<button onclick="choose('first','🌳 Хүрээлэнд алхах')">
+🌳 Хүрээлэнд алхах
+</button>
+
+</div>
+
+
+
+<!-- KINO ESVEL PARK -->
+<div class="box hidden" id="place">
+
+<h2>🎬 Дараа нь?</h2>
+
+<button onclick="choose('place','🎬 Кино')">
+🎬 Кино үзэх
+</button>
+
+<button onclick="choose('place','🎡 Парк')">
+🎡 Парк явах
+</button>
+
+</div>
+
+
+
+<!-- KINO SONGOLT -->
+<div class="box hidden" id="movie">
+
+<h2>🎬 Ямар кино үзэх вэ?</h2>
+
+<button onclick="choose('extra','😱 Аймшгийн кино')">
+😱 Аймшгийн
+</button>
+
+<button onclick="choose('extra','😂 Хөгжилтэй кино')">
+😂 Хөгжилтэй
+</button>
+
+</div>
+
+
+
+<!-- PARK SONGOLT -->
+<div class="box hidden" id="park">
+
+<h2>🎡 Паркт юу хийх вэ?</h2>
+
+<button onclick="choose('extra','🎢 Галзуу хулгана')">
+🎢 Галзуу хулгана
+</button>
+
+<button onclick="choose('extra','🎟️ Багц аваад тоглох')">
+🎟️ Багц аваад тоглох
+</button>
+
+</div>
+
+
+
+<!-- TSAG SONGOLT -->
+<div class="box hidden" id="time">
+
+<h2>🕛 Цагаа сонгоорой</h2>
+
+<button onclick="choose('time','12:00')">12:00</button>
+<button onclick="choose('time','13:00')">13:00</button>
+<button onclick="choose('time','14:00')">14:00</button>
+<button onclick="choose('time','15:00')">15:00</button>
+<button onclick="choose('time','16:00')">16:00</button>
+<button onclick="choose('time','17:00')">17:00</button>
+<button onclick="choose('time','18:00')">18:00</button>
+
+</div>
+
+
+
+<script src="script.js"></script>
+<!-- FINAL TICKET -->
+<div class="box hidden ticket" id="ticket">
+
+<h1>🎫 VIP DATE TICKET</h1>
+
+<div class="qr">
+⬛⬜⬛<br>
+⬜⬛⬜<br>
+⬛⬜⬛
+</div>
+
+<h2>💖 Эгшиглэнгийн болзоо</h2>
+
+<p>📅 Өдөр: <span id="showDay"></span></p>
+<p>🕒 Цаг: <span id="showTime"></span></p>
+<p>✨ Эхлэл: <span id="showFirst"></span></p>
+<p>🎯 Төлөвлөгөө: <span id="showPlace"></span></p>
+<p>🎁 Сонголт: <span id="showExtra"></span></p>
+
+<hr>
+
+<h3>
+📸 Screenshot хийгээд<br>
+надад явуулаарай ❤️
+</h3>
+
+<div class="confetti">✨ 💖 ✨ 💕 ✨</div>
+
+</div>
+
+</body>
+</html>

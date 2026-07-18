@@ -1,0 +1,176 @@
+*{
+    box-sizing:border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ffd6e7,#fff0f6);
+    overflow-x:hidden;
+}
+
+/* Glass card */
+.box{
+    width:90%;
+    max-width:420px;
+    padding:30px;
+    text-align:center;
+    background:rgba(255,255,255,0.45);
+    backdrop-filter:blur(15px);
+    border-radius:30px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.15);
+    animation:show .5s ease;
+}
+
+.hidden{
+    display:none;
+}
+
+h1{
+    color:#ff4f91;
+    font-size:25px;
+}
+
+h2{
+    color:#ff5c9f;
+}
+
+
+button{
+    border:none;
+    padding:14px 22px;
+    margin:8px;
+    border-radius:25px;
+    background:#ff7eb3;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+    background:#ff4f91;
+}
+
+
+/* no button */
+#no{
+    position:relative;
+}
+
+
+/* ticket */
+.ticket{
+    background:white;
+    border:3px dashed #ff7eb3;
+}
+
+.ticket h1{
+    letter-spacing:2px;
+}
+
+.ticket p{
+    font-size:17px;
+    color:#555;
+}
+
+
+.qr{
+    margin:auto;
+    width:70px;
+    padding:10px;
+    border:2px solid #333;
+    font-size:20px;
+    line-height:15px;
+}
+
+
+.confetti{
+    margin-top:20px;
+    font-size:25px;
+    animation:float 2s infinite;
+}
+
+
+/* music */
+.music{
+    position:fixed;
+    top:20px;
+    right:20px;
+}
+
+.music button{
+    border-radius:50%;
+}
+
+
+/* hearts animation */
+.hearts:before{
+    content:"❤️ 💕 💗 💖";
+    position:fixed;
+    top:-20px;
+    left:20%;
+    font-size:30px;
+    animation:heart 8s linear infinite;
+}
+
+
+@keyframes heart{
+
+    0%{
+        transform:translateY(-50px);
+    }
+
+    100%{
+        transform:translateY(110vh);
+    }
+
+}
+
+
+@keyframes show{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+@keyframes float{
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+}
+
+
+
+/* phone */
+@media(max-width:500px){
+
+    .box{
+        padding:20px;
+    }
+
+    h1{
+        font-size:21px;
+    }
+
+    button{
+        width:90%;
+    }
+
+}
